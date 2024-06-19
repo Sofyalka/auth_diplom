@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "61ea4c6b-a8e5-4247-b46c-782319691484",
+		"name": "auth_module_tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8080/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\":\"asds\",\n    \"email\":\"someemail\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8080/api/auth/register/code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\":\"FB8B2E\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8080/api/auth/register/code",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						"code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8080/api/auth/register/complete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTg0MDUxMDYsImV4cCI6MTcxODQwODcwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmV3bG9naW4ifQ.KxRRDzKhrRr8KxiEk9nWHtPaCE24kPu5BqYp8o42NlkJlO0c_vf-PHXS-E6OR8H5UWO83r4I5o4eduJloKVDdCmo06ZLC4wasnYSNTZuPCVcTYihJzPpgsnsZky_03VFWIfxvJe8SDiouEhaqThxrEz5MIqDOCN9y98-cgwqDvr5b4i5Bl13NQqjuIPLZg_7kEIPXhaeKAi-le0wjQjl2DfanxmHWlD78Y_8QN5xIAqhy-o2wqKEK9dRHNQnCvMGoggeLv0L5XU8KthRyD7Eqq0HdFt6QwBXn9fAOul1QmknD0G3PRbvARFBouyjctr8o_YN9UFdXOQFvL3brV2Cpw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"password\": \"asdasd\",\n   \"confirm\": \"asdasd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8080/api/auth/register/complete",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8080/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTg0MDUxMDYsImV4cCI6MTcxODQwODcwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmV3bG9naW4ifQ.KxRRDzKhrRr8KxiEk9nWHtPaCE24kPu5BqYp8o42NlkJlO0c_vf-PHXS-E6OR8H5UWO83r4I5o4eduJloKVDdCmo06ZLC4wasnYSNTZuPCVcTYihJzPpgsnsZky_03VFWIfxvJe8SDiouEhaqThxrEz5MIqDOCN9y98-cgwqDvr5b4i5Bl13NQqjuIPLZg_7kEIPXhaeKAi-le0wjQjl2DfanxmHWlD78Y_8QN5xIAqhy-o2wqKEK9dRHNQnCvMGoggeLv0L5XU8KthRyD7Eqq0HdFt6QwBXn9fAOul1QmknD0G3PRbvARFBouyjctr8o_YN9UFdXOQFvL3brV2Cpw",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"password\": \"asdasd\",\n   \"login\": \"newlogin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8080/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8080/api/auth/login/code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTg0MDUxMDYsImV4cCI6MTcxODQwODcwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmV3bG9naW4ifQ.KxRRDzKhrRr8KxiEk9nWHtPaCE24kPu5BqYp8o42NlkJlO0c_vf-PHXS-E6OR8H5UWO83r4I5o4eduJloKVDdCmo06ZLC4wasnYSNTZuPCVcTYihJzPpgsnsZky_03VFWIfxvJe8SDiouEhaqThxrEz5MIqDOCN9y98-cgwqDvr5b4i5Bl13NQqjuIPLZg_7kEIPXhaeKAi-le0wjQjl2DfanxmHWlD78Y_8QN5xIAqhy-o2wqKEK9dRHNQnCvMGoggeLv0L5XU8KthRyD7Eqq0HdFt6QwBXn9fAOul1QmknD0G3PRbvARFBouyjctr8o_YN9UFdXOQFvL3brV2Cpw",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"code\": \"889B7C\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8080/api/auth/login/code",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						"code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8080/api/auth/refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MTg0MDUxMDYsImV4cCI6MTcxODQwODcwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmV3bG9naW4ifQ.KxRRDzKhrRr8KxiEk9nWHtPaCE24kPu5BqYp8o42NlkJlO0c_vf-PHXS-E6OR8H5UWO83r4I5o4eduJloKVDdCmo06ZLC4wasnYSNTZuPCVcTYihJzPpgsnsZky_03VFWIfxvJe8SDiouEhaqThxrEz5MIqDOCN9y98-cgwqDvr5b4i5Bl13NQqjuIPLZg_7kEIPXhaeKAi-le0wjQjl2DfanxmHWlD78Y_8QN5xIAqhy-o2wqKEK9dRHNQnCvMGoggeLv0L5XU8KthRyD7Eqq0HdFt6QwBXn9fAOul1QmknD0G3PRbvARFBouyjctr8o_YN9UFdXOQFvL3brV2Cpw",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8080/api/auth/refresh",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
